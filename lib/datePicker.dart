@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-
-
-
 class DateTimePicker extends StatefulWidget {
+  const DateTimePicker({super.key});
+
   @override
   _DateTimePickerState createState() => _DateTimePickerState();
 }
@@ -48,32 +47,27 @@ class _DateTimePickerState extends State<DateTimePicker> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Date and Time Picker'),
-      ),
-      body: Center(
-        child: GestureDetector(
-          onTap: () {
-            _selectDate();
-          },
-          child: Row(
-            children: [
-              Icon(
-                Icons.calendar_today,
-                color: Colors.white,
-                size: 24, // Adjust size as needed
-              ),
-              SizedBox(width: 8),
-              Text(
-                DateFormat('dd/MM/yyyy hh:mm a').format(_selectedDateTime),
-                style: TextStyle(color: Colors.white, fontSize: 16),
-              ),
-            ],
-          ),
+    return Center(
+      child: GestureDetector(
+        onTap: () {
+          _selectDate();
+        },
+        child: Row(
+          children: [
+          const  Icon(
+              Icons.calendar_today,
+              color: Colors.white,
+              size: 12, // Adjust size as needed
+            ),
+           const  SizedBox(width: 8),
+            Text(
+              DateFormat('dd/MM/yyyy hh:mm a').format(_selectedDateTime),
+              style:const TextStyle(color: Colors.white, fontSize: 10),
+            ),
+          ],
         ),
       ),
-      backgroundColor: Colors.blueGrey, // Background color to match text color
     );
+    // Background color to match text color
   }
 }
