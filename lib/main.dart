@@ -85,7 +85,7 @@ class _CarBookingScreenState extends State<CarBookingScreen> {
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                // Color(0xff136ffd), // Color at index 600
+               
                 Color(0xff0c58e9), // Color at index 700
                 Color(0xff1147bc), // Color at index 800
                 Color(0xff123984), // Color at index 900
@@ -161,15 +161,15 @@ class _CarBookingScreenState extends State<CarBookingScreen> {
             const SizedBox(
               height: 10,
             ),
-            // Car Image Section
-            Container(
+           
+            SizedBox(
               height: 250,
               child: PageView(
                 children: [
                   Image.asset(
                     'assets/images/MainThar.png',
                     fit: BoxFit.cover,
-                  ), // Replace with your image paths
+                  ), 
                   Image.asset(
                     'assets/images/Thar1.png',
                     fit: BoxFit.cover,
@@ -575,7 +575,8 @@ class _CarBookingScreenState extends State<CarBookingScreen> {
                   children: [
                     Text(
                       'Important Points To Remember',
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(height: 8),
                     Row(
@@ -587,10 +588,19 @@ class _CarBookingScreenState extends State<CarBookingScreen> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("Change in Pricing Plan",style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
+                                Text(
+                                  "Change in Pricing Plan",
+                                  style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.bold),
+                                ),
                                 SizedBox(height: 4),
                                 Text(
-                                    "The pricing plan \n (10 kms/hr, without fuel)\n cannot be changed after \n the booking is made",softWrap: true,overflow: TextOverflow.visible,style: TextStyle(fontSize:10),),
+                                  "The pricing plan \n (10 kms/hr, without fuel)\n cannot be changed after \n the booking is made",
+                                  softWrap: true,
+                                  overflow: TextOverflow.visible,
+                                  style: TextStyle(fontSize: 10),
+                                ),
                                 SizedBox(height: 80),
                                 Icon(Icons.currency_rupee_outlined)
                               ],
@@ -604,10 +614,17 @@ class _CarBookingScreenState extends State<CarBookingScreen> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("Fuel",style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),),
                                 Text(
-                                    "In case you are returning \n the car at a lower fuel \n level than what was received,\n  we will charge a flat \n  Rs 500 refuelling service \n charge + actual fuel \n cost to get  the tank \n to the same level \n as what was received",style: TextStyle(fontSize: 10),),
-                                SizedBox(height:13),
+                                  "Fuel",
+                                  style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Text(
+                                  "In case you are returning \n the car at a lower fuel \n level than what was received,\n  we will charge a flat \n  Rs 500 refuelling service \n charge + actual fuel \n cost to get  the tank \n to the same level \n as what was received",
+                                  style: TextStyle(fontSize: 10),
+                                ),
+                                SizedBox(height: 13),
                                 Icon(Icons.gas_meter)
                               ],
                             ),
@@ -619,7 +636,7 @@ class _CarBookingScreenState extends State<CarBookingScreen> {
                 ),
               ),
             ),
-            
+
             // Footer Section
             Padding(
               padding: const EdgeInsets.all(16.0),
@@ -650,15 +667,18 @@ class _CarBookingScreenState extends State<CarBookingScreen> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Image.asset(car["images"][0], height: 80),
-                                  Text( car['name'],style: const TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+                                  Text(
+                                    car['name'],
+                                    style: const TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold),
+                                  ),
                                   Text("Fuel: ${car['fuelType']}"),
                                   Text("Gear: ${car['gearType']}"),
                                   Text("Seaters: ${car['seaters']}"),
                                   // Text(car["name"]),
                                   // Row(children: [Text(car["gearType"]),Text((car["seaters"]).toString())],),
                                   //  Row(children: [Text("₹4500"),Text("per day")],),
-                                  
-
                                 ],
                               ),
                             ),
@@ -674,89 +694,123 @@ class _CarBookingScreenState extends State<CarBookingScreen> {
             Container(
               padding: const EdgeInsets.all(8),
               decoration: const BoxDecoration(
-                gradient: LinearGradient(
-              colors: [
-                // Color(0xff136ffd), // Color at index 600
-                Color(0xff0c58e9), // Color at index 700
-                Color(0xff1147bc), // Color at index 800
-                Color(0xff123984), // Color at index 900
-                Color(0xff11285a), // Color at index 950
-                Color(0xff11285a), // Color at index 950
-                Color(0xff123984), // Color at index 900
-                Color(0xff1147bc), // Color at index 800
-                Color(0xff0c58e9), // Color at index 700
-                Color(0xff136ffd), // Color at index 600
-              ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ) 
-              ),
+                  gradient: LinearGradient(
+                colors: [
+                  Color(0xff0c58e9), // Color at index 700
+                  Color(0xff1147bc), // Color at index 800
+                  Color(0xff123984), // Color at index 900
+                  Color(0xff11285a), // Color at index 950
+                  Color(0xff11285a), // Color at index 950
+                  Color(0xff123984), // Color at index 900
+                  Color(0xff1147bc), // Color at index 800
+                  Color(0xff0c58e9), // Color at index 700
+                  Color(0xff136ffd), // Color at index 600
+                ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              )),
               child: Row(
                 children: [
                   Column(
                     children: [
-                     const  SizedBox(height: 20,),
+                      const SizedBox(
+                        height: 20,
+                      ),
                       Image.asset("assets/images/Logo.png"),
-                   const    SizedBox(height: 20,),
+                      const SizedBox(
+                        height: 20,
+                      ),
                       Container(
-                        padding:const  EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
-                          color: Colors.white70,
-                          borderRadius: BorderRadius.circular(15)),
-                        
+                            color: Colors.white70,
+                            borderRadius: BorderRadius.circular(15)),
                         child: const Row(
                           children: [
                             FaIcon(FontAwesomeIcons.youtube),
-                            SizedBox(width: 5,),
+                            SizedBox(
+                              width: 5,
+                            ),
                             FaIcon(FontAwesomeIcons.facebook),
-                            SizedBox(width: 5,),
+                            SizedBox(
+                              width: 5,
+                            ),
                             FaIcon(FontAwesomeIcons.instagram),
-                            SizedBox(width: 5,),
+                            SizedBox(
+                              width: 5,
+                            ),
                             FaIcon(FontAwesomeIcons.linkedin),
-                            SizedBox(width: 5,),
+                            SizedBox(
+                              width: 5,
+                            ),
                             FaIcon(FontAwesomeIcons.twitter),
                           ],
                         ),
                       ),
-                      const SizedBox(height: 40,),
-                      const Text("Privacy | Terms & Conditions",style: TextStyle(decoration: TextDecoration.underline,color: Colors.white),)
-
+                      const SizedBox(
+                        height: 40,
+                      ),
+                      const Text(
+                        "Privacy | Terms & Conditions",
+                        style: TextStyle(
+                            decoration: TextDecoration.underline,
+                            color: Colors.white),
+                      )
                     ],
                   ),
-                 const  Padding(
-                    padding:  EdgeInsets.only(left: 25),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 25),
                     child: Column(
                       children: [
-                        SizedBox(height: 10,),
-                              Text('Home',style:TextStyle(fontSize: 20,color: Colors.white)),
-                        SizedBox(height: 10,),
-                        Text('FAQs',style:TextStyle(fontSize: 20,color: Colors.white)),
-                        SizedBox(height: 10,),
-                        Text('Safety',style:TextStyle(fontSize: 20,color: Colors.white)),
-                        SizedBox(height: 10,),
-                        Text('Blog',style:TextStyle(fontSize: 20,color: Colors.white)),
-                        SizedBox(height: 10,),
-                        Text('Contact Us',style:TextStyle(fontSize: 20,color: Colors.white)),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('Home',
+                            style:
+                                TextStyle(fontSize: 20, color: Colors.white)),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('FAQs',
+                            style:
+                                TextStyle(fontSize: 20, color: Colors.white)),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('Safety',
+                            style:
+                                TextStyle(fontSize: 20, color: Colors.white)),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('Blog',
+                            style:
+                                TextStyle(fontSize: 20, color: Colors.white)),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('Contact Us',
+                            style:
+                                TextStyle(fontSize: 20, color: Colors.white)),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Text(""),
-
-                        Padding(padding: EdgeInsets.only(left: 20),
-                        child: Text('      ©2024 Valam',style:TextStyle(fontSize: 14,color: Colors.white)),)
+                        Padding(
+                          padding: EdgeInsets.only(left: 20),
+                          child: Text('      ©2024 Valam',
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                        )
                       ],
                     ),
                   )
                 ],
               ),
             )
-           
-            // Footer Links
-          
           ],
         ),
       ),
     );
   }
 }
-
-
-
